@@ -33,9 +33,13 @@ function processCommand(command) {
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
       renderMultipleLines(COMMAND_LIST, 80);
       break;
-    case "about":
+    case "whois":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-      renderMultipleLines(ABOUT, 80);
+      renderMultipleLines(WHOIS, 80);
+      break;
+    case "whoami":
+      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      renderMultipleLines(WHOAMI, 80);
       break;
     case "social":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
@@ -53,60 +57,64 @@ function processCommand(command) {
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
       renderBanner();
       break;
-    case "curriculum":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-      newTab("https://ealpizarp.github.io/erick-alpizar-cv/");
-      break;
+    // case "curriculum":
+    //   commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+    //   newTab("https://ealpizarp.github.io/erick-alpizar-cv/");
+    //   break;
     case "clear":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
       setTimeout( () =>
       contentHook = clearTerminal(terminal, contentHook), 1)
       break;
-    case "ls":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-      renderMultipleLines(DIRECTORIES, 80);
-      break;
-    case "sudo":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-      renderMultipleLines(SUDO, 80);
-      break;
-    case "education":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-      if (mql.matches) {
-        renderMultipleLines(MOBILE_EDUCATION_INFO, 80);
-      } else {
-        renderMultipleLines(EDUCATION_INFO, 80);
-      }
-      break;
+    // case "ls":
+    //   commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+    //   renderMultipleLines(DIRECTORIES, 80);
+    //   break;
+    // case "sudo":
+    //   commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+    //   renderMultipleLines(SUDO, 80);
+    //   break;
+    // case "education":
+    //   commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+    //   if (mql.matches) {
+    //     renderMultipleLines(MOBILE_EDUCATION_INFO, 80);
+    //   } else {
+    //     renderMultipleLines(EDUCATION_INFO, 80);
+    //   }
+    //   break;
     case "pwd":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-      renderLine("<br>/home/ericalpizar/projects/cliPortafolio<br><br>");
+      renderLine("<br>/home/rhea212/projects/cliPortfolio<br><br>");
       break
     case "echo":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
       const printCommands = args.slice(1).join(" ");
       renderLine("<br>" + printCommands + "<br></br>", 80);
       break;
-    case "cd":
-      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-      if (args[1] === "music") {
-        renderLine("Opennig music...", 80);
-        newTab("https://open.spotify.com/user/ealpizaro?si=d3239ad0630d4390");
-      } else if (args[1] === "photos") {
-        renderLine("Opennig photos...", 80);
-        newTab("https://photos.app.goo.gl/DHzDdzHrc4K46CrCA");
-      } else if (args[1] === "videos") {
-        renderLine("Opennig videos...", 80);
-        newTab("https://www.youtube.com/playlist?list=FLBt0XXUPegLUnars8P-eogQ");
-      } else {
-        renderLine("Directory not found: " + args.slice(1).join(" "));
-      }
-      break;
+    // case "cd":
+    //   commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+    //   if (args[1] === "music") {
+    //     renderLine("Opennig music...", 80);
+    //     newTab("https://open.spotify.com/user/ealpizaro?si=d3239ad0630d4390");
+    //   } else if (args[1] === "photos") {
+    //     renderLine("Opennig photos...", 80);
+    //     newTab("https://photos.app.goo.gl/DHzDdzHrc4K46CrCA");
+    //   } else if (args[1] === "videos") {
+    //     renderLine("Opennig videos...", 80);
+    //     newTab("https://www.youtube.com/playlist?list=FLBt0XXUPegLUnars8P-eogQ");
+    //   } else {
+    //     renderLine("Directory not found: " + args.slice(1).join(" "));
+    //   }
+    //   break;
       case "history":
         renderLine("<br>");
         comandHistory.push("<br>");
         renderMultipleLines(comandHistory, 80);
         comandHistory.pop()
+        break;
+      case "shibe":
+        commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+        fetchRandomShibaPic();
         break;
     default:
       if (mql.matches) {
@@ -362,3 +370,27 @@ function handleArrowDownKeyPress(event) {
     }
   }
 }
+
+async function fetchRandomShibaPic() {
+  const container = document.getElementById("imgContainer");
+  const loader=document.createElement('p');
+  container.replaceChildren(loader);
+  loader.style.cssText="color:#fff;";
+  loader.innerText='Fetching a shiba...';
+  const url="http://shibe.online/api/shibes";
+  const response = await fetch(url);
+  const body =  await response.json();
+  const dogPicUrl=body[0];
+  const image = document.createElement("img");
+  image.src=dogPicUrl;
+  image.onload= () => {
+    // Waiting until the image has finished loading
+    imgContainer.replaceChildren(image);
+    // image.style.display = 'block';
+    // image.style.height='15rem';
+    // image.style.margin='2rem 10rem';
+    image.style.cssText="display: block; height: 15rem; margin: 2rem 10rem;";
+    loader.innerText="Yes my terminal prints dog images. Dogs deserve some rule-breaking.";
+    container.append(loader);
+  };
+} 
