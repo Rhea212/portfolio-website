@@ -11,7 +11,7 @@
       media="screen"
       href="css/style.css"
     />
-    <link rel="icon" type="image/png" href="img/man.png">
+    <link rel="icon" type="image/png" href="img/owl.png">
     <script defer src="js/commands.js"></script>
     <script defer src="js/inputRenderer.js"></script>
     <script defer type="module" src="js/commandParser.js"></script>
@@ -21,6 +21,7 @@
 
   <body>
     <div id="terminal">
+      <!-- <div id="imgContainer"></div> -->
       <a id="contentHook"></a>
     </div>
     <div id="command" onclick="focusOnTextArea()">
@@ -30,7 +31,7 @@
         onkeydown="moveCursor(this.value.length, event)"
         autofocus
       ></textarea>
-      <div id="imgContainer"></div>
+      
       <div id="liner">
         <span id="typer"></span><b class="cursor" id="cursor">█</b>
         <span id="mobileInput"><input type="text" autocapitalize="none" autocorrect="off" spellcheck="false" autocomplete="off" inputmode="text" ></span>

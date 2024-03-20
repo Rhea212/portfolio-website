@@ -41,9 +41,9 @@ function processCommand(command) {
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
       renderMultipleLines(WHOAMI, 80);
       break;
-    case "social":
+    case "profiles":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-      renderMultipleLines(SOCIAL, 80);
+      renderMultipleLines(PROFILES, 80);
       break;
     case "projects":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
@@ -57,31 +57,20 @@ function processCommand(command) {
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
       renderBanner();
       break;
-    // case "curriculum":
-    //   commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-    //   newTab("https://ealpizarp.github.io/erick-alpizar-cv/");
-    //   break;
+    case "resume":
+      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      renderLine("<br>Opening my resume in a new tab..<br><br>");
+      newTab("https://drive.google.com/file/d/1mBxI5IQ8McDppOw_6XYbDq74ronQanuO/view?usp=sharing");
+      break;
     case "clear":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
       setTimeout( () =>
       contentHook = clearTerminal(terminal, contentHook), 1)
       break;
-    // case "ls":
-    //   commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-    //   renderMultipleLines(DIRECTORIES, 80);
-    //   break;
-    // case "sudo":
-    //   commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-    //   renderMultipleLines(SUDO, 80);
-    //   break;
-    // case "education":
-    //   commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-    //   if (mql.matches) {
-    //     renderMultipleLines(MOBILE_EDUCATION_INFO, 80);
-    //   } else {
-    //     renderMultipleLines(EDUCATION_INFO, 80);
-    //   }
-    //   break;
+    case "sudo":
+      commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
+      renderMultipleLines(SUDO, 80);
+      break;
     case "pwd":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
       renderLine("<br>/home/rhea212/projects/cliPortfolio<br><br>");
@@ -91,21 +80,6 @@ function processCommand(command) {
       const printCommands = args.slice(1).join(" ");
       renderLine("<br>" + printCommands + "<br></br>", 80);
       break;
-    // case "cd":
-    //   commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
-    //   if (args[1] === "music") {
-    //     renderLine("Opennig music...", 80);
-    //     newTab("https://open.spotify.com/user/ealpizaro?si=d3239ad0630d4390");
-    //   } else if (args[1] === "photos") {
-    //     renderLine("Opennig photos...", 80);
-    //     newTab("https://photos.app.goo.gl/DHzDdzHrc4K46CrCA");
-    //   } else if (args[1] === "videos") {
-    //     renderLine("Opennig videos...", 80);
-    //     newTab("https://www.youtube.com/playlist?list=FLBt0XXUPegLUnars8P-eogQ");
-    //   } else {
-    //     renderLine("Directory not found: " + args.slice(1).join(" "));
-    //   }
-    //   break;
       case "history":
         renderLine("<br>");
         comandHistory.push("<br>");
@@ -372,11 +346,11 @@ function handleArrowDownKeyPress(event) {
 }
 
 async function fetchRandomShibaPic() {
-  const container = document.getElementById("imgContainer");
-  const loader=document.createElement('p');
-  container.replaceChildren(loader);
-  loader.style.cssText="color:#fff;";
-  loader.innerText='Fetching a shiba...';
+  const container=document.createElement("div");
+  const contentHook=document.getElementById("contentHook");
+  const prompt = document.getElementById("liner");
+  prompt.classList.add("hidden");
+  renderLine("Fetching a shiba...hopefully (I swear I saw a cat here once)",0,"white");
   const url="http://shibe.online/api/shibes";
   const response = await fetch(url);
   const body =  await response.json();
@@ -384,13 +358,11 @@ async function fetchRandomShibaPic() {
   const image = document.createElement("img");
   image.src=dogPicUrl;
   image.onload= () => {
-    // Waiting until the image has finished loading
-    imgContainer.replaceChildren(image);
-    // image.style.display = 'block';
-    // image.style.height='15rem';
-    // image.style.margin='2rem 10rem';
-    image.style.cssText="display: block; height: 15rem; margin: 2rem 10rem;";
-    loader.innerText="Yes my terminal prints dog images. Dogs deserve some rule-breaking.";
-    container.append(loader);
+    contentHook.parentNode.insertBefore(container,contentHook);
+    container.replaceChildren(image);
+    image.classList.add("dogpic");
+    renderLine("Yes my terminal prints dog images. Dogs deserve some rule-breaking.",0,"white");
+    prompt.classList.remove("hidden");
+    scrollToBottom();
   };
 } 

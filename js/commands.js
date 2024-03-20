@@ -1,34 +1,42 @@
-// const TWITTER = "https://twitter.com/AlpizarEric";
-const LINKEDIN = "https://www.linkedin.com/in/rhea-rajput/";
-// const INSTAGRAM = "https://www.instagram.com/_ealpizarp/";
+const LINKEDIN = "https://www.linkedin.com/in/rhea-rajput";
 const GITHUB = "https://github.com/Rhea212";
 const EMAIL = 'rheaprajput@gmail.com';
-// const USERNAME = "ealpizarp";
+const THM = "https://tryhackme.com/p/rhea212";
+const MEDIUM = "https://medium.com/@rhea212";
+const OWASP = "https://owasp.org/www-chapter-thakur-college-of-engineering-and-technology/";
 
 
 const WHOIS = [
   "<br>",
-  "I'm Rhea, a Computer Science ",
-  "and Engineering student with ",
-  "a passion for Cybersecurity! 💻",
+  "I'm Rhea, a third year Computer Science",
+  "and Engineering student with a passion",
+  "for Cybersecurity!",
   "                            ",
-  "My love for examining weaknesses runs deep", 
-  "and I'm constantly honing my skills",
-  "like attention to detail, ",
-  "and other technical fields that",
-  "keep me engaged and inspired.",
+  "My love for examining weaknesses runs deep.", 
+  "I'm constantly honing my skills in",
+  "Ethical Hacking, Vulnerability Assessment,",
+  "and Penetration Testing primarily through",
+  "CTFs (Capture the Flag events), which keep", 
+  "me engaged and inspired!",
   "                             ",
-  "                             ",
-  "I find joy in constantly learning new",
-  "things and tackling challenges with",
-  "creativity and innovation.",
+  "Ever since I started considering cybersecuity",
+  "as my career, I felt a lack of focus and",
+  "awareness about it in terms of college ",
+  "activities and initiatives. This led to the",
+  "establishment of the OWASP Student Chapter in",
+  "my college, an initiative taken and currently",
+  "being led by my friends and I. Ours is the",
+  "first such chapter of OWASP in Mumbai and we",
+  "conduct practical sessions, including CTFs.",
+  "Check out our chapter page <a href=https://owasp.org/www-chapter-thakur-college-of-engineering-and-technology/ target=blank>here</a>!",
+  "                            ",
+  "I find joy in constantly learning new things",
+  "and tackling challenges with creativity and",
+  "innovation. This helps me stay on my toes.",
   "                                     ",
-  "As I approach my final year of my",
-  "degree, I'm eager to explore job ",
-  "opportunities and dive deeper into", 
-  "research projects. Being at the" ,
-  "forefront of technological innovation ",
-  "is a true passion of mine. 🚀",,
+  "As I approach the final year of my degree,",
+  "I'm eager to explore opportunities that help",
+  "me utilise my passion in real-world scenarios.", 
   "<br>"
 ];
 
@@ -43,102 +51,61 @@ WHOAMI=[
   "<br>"
 ];
 
-SOCIAL = [
+PROFILES = [
   "<br>",
-  // 'twitter        <a href="' + TWITTER + '" target="_blank">twitter/' + USERNAME + '</a>',
-  'linkedin       <a href="' + LINKEDIN + '" target="_blank">linkedin/' + 'rhea-rajput' + "</a>",
-  // 'instagram      <a href="' + INSTAGRAM + '" target="_blank">instagram/' + USERNAME + '</a>',
-  'github         <a href="' + GITHUB + '" target="_blank">github/' + 'Rhea212' + "</a>",
+  'LinkedIn       <a href="' + LINKEDIN + '" target="_blank">linkedin/' + 'rhea-rajput' + "</a>",
+  'Try Hack Me    <a href="' + THM + '" target="_blank">tryhackme/' + 'rhea212' + "</a>",
+  'GitHub         <a href="' + GITHUB + '" target="_blank">github/' + 'Rhea212' + "</a>",
+  'Medium         <a href="' + MEDIUM + '" target="_blank">medium/' + 'rhea212' + "</a> (I'm working on adding more content)",
   "<br>"
-];
 
+];
 
 PROJECTS = [
   "<br>",
-  "Here are some of my projects:",
+  "<strong> - Sniffy - A Packet Dissector <strong>",
+  "A command-line based packet sniffer built using the Scapy",
+  "python library. It is capable of capturing, filtering and",
+  "dissecting packets according to the layers of the TCP/IP ",
+  "Model. Currently a work in progress, with more features",
+  "in development.",
+  "<a href=https://github.com/Rhea212/sniffy-pkt-dissector target=blank> GitHub link</a>",
   "<br>",
-  "<strong> - Officia App <strong>",
-  "A web-based marketplace connecting",
-  "independent professionals with clients",
-  "seeking high-quality services in",
-  "Costa Rica",
-  "<a href=https://github.com/ealpizarp/officia-app/tree/db_branch> GitHub link",
-  "Tech stack: PHP, Laravel, Tailwind, JS",
-  "<br>",
-  "<strong> - Extended Triangle Compiler <strong>",
-  "An extension of the Triangle compiler",
-  "originally developed in the book",
-  "Programming Language Processors in",
-  "Java (Watt & Brown, 2000)",
-  "Tech stack: Java",
-  "<a href=https://github.com/ealpizarp/Extended-Triangle-Compiler> GitHub link",
-  "<br>",
-  "<strong> - Climate Crawler <strong>",
-  "Hadoop-based data processing solution",
-  "for web crawler data with a", 
-  "web interface",
-  "Tech stack: Hadoop, Python, React",
-  "<a href=https://github.com/ealpizarp/Climate-Crawler> GitHub link",
-  "<br>",
-  "<strong> - Angular Weather app <strong>",
-  "Angular weather app that uses an",
-  "API for real-time weather data.",
-  "Tech stack: Angular, CSS, Typescript",
-  "<a href=https://github.com/ealpizarp/angular-weather-app> GitHub link",
-  "<br>",
-  "<strong>Check out some of my other projects",
-  "<strong> in my </strong> <a class=\"command\" href=https://github.com/ealpizarp/> GitHub profile</a> <strong>",
-  "<br>"
-
 ];
 
 COMMAND_LIST = [
   "<br>",
   '<span class="command">whois</span>          Learn about me',
-  '<span class="command">whoami</span>          Learn about yourself',
-  '<span class="command">social</span>         Display social networks',
-  // '<span class="command">education</span>      Show my education',
-  // '<span class="command">curriculum</span>     Open my web curriculum',
-  '<span class="command">projects</span>       View some of my projects',
-  '<span class="command">history</span>        Show command history',
+  '<span class="command">whoami</span>         Learn about yourself',
+  '<span class="command">profiles</span>       Checkout some of my public profiles',
+  '<span class="command">projects</span>       View my projects',
+  '<span class="command">resume</span>         View my resume',
   '<span class="command">email</span>          Feel free to reach out',
-  '<span class="command">banner</span>         Display the header',
-  '<span class="command">clear</span>          Clear terminal',
-  '<span class="command">echo</span>           Print any give string',
-  // '<span class="command">ls</span>             List directory content',
-  // '<span class="command">cd &lt;directory&gt</span> Change directory',
   '<span class="command">shibe</span>          See a random shiba dog pic cause why not?',
-  '<span class="command">help</span>           Display all commands',
+  '<span class="command">banner</span>         Display the header',
+  '<span class="command">history</span>        Show command history',
+  '<span class="command">echo</span>           Print any given string',
+  '<span class="command">clear</span>          Clear terminal',
+  '<span class="command">help</span>           View this guide',
   "<br>",
 ];
 BANNER = [
 
-  "        .n.                                                                        |",
-  "       /___\\                                                             _.---.  \\ _ /",
-  "       [|||]                                                            (_._ ) )--;_) =-",
-  "       [___]                                                               '---'.__,' \\ ",
-  `       }-=-{          ____  __                  ____          _             __     |`,
-  '       |-" |         / __ \\/ /_  ___  ____ _   / __ \\____ _  (_)___  __  __/ /_             ',     
-  '       |.-"|        / /_/ / __ \\/ _ \\/ __ `/  / /_/ / __ `/ / / __ \\/ / / / __/             p',
-  "~^=~^~-|_.-|~^-~^~ /_/ |_/_/ /_/\\___/\\__,_/  /_/ |_|\\__,_/_/ / .___/\\__,_/\\__/  ~^~ -^~^~   |\\ ~^-~^~-",        
-  `^   .=.| _.|__  ^                                       /___/_/            ® 2024       ~  /| \\ `,
-  ' ~ /:. \\" _|_/\\    ~         ~                       ~                                    /_|__\\  ^',
-  '.-/::.  |   |""|-._    ^                                     ~                             ~~~~',
-  "  `===-'-----' "+ `""` + "`  '-.              ~            ~                       ",
-  "                 __.-'      ^",
-      
+  "                                                                                                   .''.",
+  "       .''.                                                                                       :_\\/_:     .",
+  "      :_\\/_:   .               *''*                                                               : /\\ :  .'.:.'.",
+  "  .''.: /\\ : _\\(/_         .:.*_\\/_*                                                            :  '..'.  -=:o:=-                  ",
+  " :_\\/_:'.:::. /)\\ *''* .|. ':'* /\\ *                                                         '.\\'/.'_\\(/_ '.':'.'              ",
+  " : /\\ : :::::  ' *_\\/_*| |     *..*                                                          -= o =- /)\\     '   *      ",     
+  "  '..'  ':::'    * /\\ *|'|       ____  __                  ____          _             __    .'/.\\'. ._____         ",    
+  "     *         ___*..*|  |      / __ \\/ /_  ___  ____ _   / __ \\____ _  (_)___  __  __/ /_      :    |.   |' .---\"|",
+  "       _*   .-'   '-. |  |     / /_/ / __ \\/ _ \\/ __ `/  / /_/ / __ `/ / / __ \\/ / / / __/    .--'|  ||   | _|    |",
+  "    .-'|  _.|  |    ||   '-__ /_/ |_/_/ /_/\\___/\\__,_/  /_/ |_|\\__,_/_/ / .___/\\__,_/\\__/ __  |   |  |    ||      |",
+  "    |' | |.    |    ||                                             /___/_/                  | |   |  |    ||      |",
+  " ___|  '-'     '    \"\"                                                                       '-'   '-.'    '`      |____ ",
+  "rpr~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
   
   ];
-
-DIRECTORIES = [ 
-"<br>",
-"photos",
-"music",
-"videos",
-"<br>"
-]
-
-
 
 EMAIL_INFO = [
   "                 ",
@@ -148,39 +115,9 @@ EMAIL_INFO = [
 
 SUDO = [
 "                                                                ",
-"Only Eric has <span class=\"command\">admin</span> privileges :(",
+"Only rhea has <span class=\"command\">admin</span> privileges :)",
 "                                                                "
 ]
-
-EDUCATION_INFO = [
-  "<br><strong>B.sc in Computer Science and Engineering</strong>",
-  "Costa Rica Institute of Technology  |  2020 - 2024",
-  "Honor student with a perfect 4.0 GPA (four point scale)",
-  "                                                  ",
-  "<strong>B.sc in Systems Analysis</strong>",
-  "Costa Rica National University  |  2019 - 2020",
-  "                                                  ",
-  "<strong>Industrial Electronics Technician</strong>",
-  "Colegio Tecnico Profesional CIT  |  2015 - 2018",
-  "<br>"
-]
-
-MOBILE_EDUCATION_INFO = [
-  "<br><strong>B.sc. Computer Science and Engineering</strong>",
-  "Costa Rica Institute of Technology",
-  "2020 - 2024",
-  "Honor student with a perfect 4.0 GPA",
-  "<br>",
-  "<strong>B.sc. Systems Analysis</strong>",
-  "Costa Rica National University",
-  "2019 - 2020",
-  "<br>",
-  "<strong>Industrial Electronics Technician</strong>",
-  "Colegio Tecnico Profesional CIT",
-  "2015 - 2018",
-  "<br>"
-]
-
 
 TERMINAL_INFO = [
 'Welcome to my interactive web terminal portfolio!',

@@ -1,13 +1,4 @@
-/* :root {
-    --background: #002b36;
-    --primaryTextColor: #93a1a1;
-    --secondaryTextColor: #73ABAD;
-    --highlightTextColor: #B89076;
-    --white: #fff;
-  } */
-
-  :root {
-    /* --background: #262a33; */
+:root {
     --background: #000000ee;
     --primaryTextColor: #e5e5e5;
     --secondaryTextColor: #e5e512;
@@ -54,6 +45,9 @@ body {
     text-decoration: underline;
   }
 
+  .hidden {
+    display: none;
+  }
   /* Cursor Start */
   .cursor {
     font-size: 0.75rem;
@@ -153,7 +147,7 @@ body {
   }
   .inherit,
   a {
-    color: #9C8394;
+    color: #58c242ee;
   }
   a {
     text-decoration: inherit;
@@ -164,6 +158,12 @@ body {
   }
   a:focus {
     outline: 0;
+  }
+
+  .dogpic {
+    display: block; 
+    height: 15rem; 
+    margin: 2rem 10rem;
   }
 
  #mobileInput {
