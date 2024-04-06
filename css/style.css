@@ -1,8 +1,8 @@
 :root {
-    --background: #000000ee;
-    --primaryTextColor: #e5e5e5;
-    --secondaryTextColor: #e5e512;
-    --highlightTextColor: #0fa8cd;
+    --background:    #012b50;  /*#011627*/
+    --primaryTextColor: #ECF0FC;
+    --secondaryTextColor: #FFEB95;
+    --highlightTextColor: #C792EA;
     --white: #fff;
     --baseDirectory: "guest@rhea212:~$";
   }
@@ -147,7 +147,7 @@ body {
   }
   .inherit,
   a {
-    color: #58c242ee;
+    color: #ADDB67;
   }
   a {
     text-decoration: inherit;
