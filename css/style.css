@@ -1,8 +1,8 @@
 :root {
-    --background:    #012b50;  /*#011627*/
+    --background:    #072b31;  /*#011627*/
     --primaryTextColor: #ECF0FC;
-    --secondaryTextColor: #FFEB95;
-    --highlightTextColor: #C792EA;
+    --secondaryTextColor: #F6EB61;
+    --highlightTextColor: #D59ED7;
     --white: #fff;
     --baseDirectory: "guest@rhea212:~$";
   }
@@ -23,6 +23,7 @@ body {
     background: var(--background);
     font-family: cursor, monospace;
     overflow-x: hidden;
+    font-size: 1.25rem;
   }
   ::selection {
     color: var(--background);
@@ -214,7 +215,7 @@ body {
     }
 
     #terminal {
-      font-size: small;
+      font-size: 1rem;
     }
 
   }

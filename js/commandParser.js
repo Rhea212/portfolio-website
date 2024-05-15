@@ -351,7 +351,7 @@ async function fetchRandomShibaPic() {
   const prompt = document.getElementById("liner");
   prompt.classList.add("hidden");
   renderLine("Fetching a shiba...hopefully (I swear I saw a cat here once)",0,"white");
-  const url="https://shibe.online/api/shibes";
+  const url="http://shibe.online/api/shibes";
   const response = await fetch(url);
   const body =  await response.json();
   const dogPicUrl=body[0];
