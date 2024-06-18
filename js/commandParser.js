@@ -351,10 +351,10 @@ async function fetchRandomShibaPic() {
   const prompt = document.getElementById("liner");
   prompt.classList.add("hidden");
   renderLine("Fetching a shiba...hopefully (I swear I saw a cat here once)",0,"white");
-  const url="https://shibe.online/api/shibes";
+  const url="https://dog.ceo/api/breed/shiba/images/random";
   const response = await fetch(url);
   const body =  await response.json();
-  const dogPicUrl=body[0];
+  const dogPicUrl=body['message'];
   const image = document.createElement("img");
   image.src=dogPicUrl;
   image.onload= () => {
