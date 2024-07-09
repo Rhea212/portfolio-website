@@ -49,7 +49,7 @@ WHOAMI=[
 PROFILES = [
   "<br>",
   'LinkedIn       <a href="' + LINKEDIN + '" target="_blank">linkedin/' + 'rhea-rajput' + "</a>",
-  'Hack The Box      <a href="' + HTB + '" target="_blank">hackthebox/' + '4nonym0us3' + "</a>",
+  'Hack The Box   <a href="' + HTB + '" target="_blank">hackthebox/' + '4nonym0us3' + "</a>",
   'GitHub         <a href="' + GITHUB + '" target="_blank">github/' + 'Rhea212' + "</a>",
   'Medium         <a href="' + MEDIUM + '" target="_blank">medium/' + 'rhea212' + "</a> (I post writeups)",
   'Try Hack Me    <a href="' + THM + '" target="_blank">tryhackme/' + 'rhea212' + "</a>",
