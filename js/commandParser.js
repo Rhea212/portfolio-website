@@ -60,7 +60,7 @@ function processCommand(command) {
     case "resume":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
       renderLine("<br>Opening my resume in a new tab..<br><br>");
-      newTab("https://flowcv.com/resume/2ss3qq00ei");
+      newTab("https://drive.google.com/file/d/1xE5l_7NZKDcvBscHrIuXnmO_UKldSD58/view?usp=sharing");
       break;
     case "clear":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
