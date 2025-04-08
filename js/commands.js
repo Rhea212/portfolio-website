@@ -1,20 +1,20 @@
 const LINKEDIN = "https://www.linkedin.com/in/rhea-rajput";
 const GITHUB = "https://github.com/Rhea212";
 const EMAIL = 'rheaprajput@gmail.com';
-const THM = "https://tryhackme.com/p/rhea212";
+const THM = "https://tryhackme.com/p/rh34";
 const MEDIUM = "https://medium.com/@rhea212";
 const OWASP = "https://owasp.org/www-chapter-thakur-college-of-engineering-and-technology/";
 const HTB = "https://app.hackthebox.com/profile/1544251";
 
 const WHOIS = [
   "<br>",
-  "I'm Rhea, a third year Computer Science and Engineering student",
+  "I'm Rhea, a final year Computer Science and Engineering student",
   "with a passion for Cybersecurity!",
   "                            ",
   "My love for examining weaknesses runs deep. I'm constantly ", 
-  "honing my skills in Ethical Hacking, Vulnerability Assessment, ",
-  "and Penetration Testing primarily through CTFs (Capture the Flag",
-  " events), which keep me engaged and inspired!", 
+  "honing my skills in Red Teaming, Penetration Testing, Digital",
+  "Forensics, and OT primarily through CTFs/machines on platforms ",
+  " like Hack The Box, which keep me engaged and inspired!", 
   "                             ",
   "Ever since I started considering cybersecuity as my career, I",
   "felt a lack of focus and awareness about it in terms of college",
@@ -29,7 +29,7 @@ const WHOIS = [
   "challenges with creativity and innovation. This helps me stay on",
   "my toes.",
   "                                     ",
-  "As I approach the final year of my degree, I'm eager to explore",
+  "As I approach the end of my degree, I'm eager to explore",
   "opportunities that help me utilise my passion in real-world",
   "scenarios.", 
   "<br>"
@@ -49,10 +49,10 @@ WHOAMI=[
 PROFILES = [
   "<br>",
   'LinkedIn       <a href="' + LINKEDIN + '" target="_blank">linkedin/' + 'rhea-rajput' + "</a>",
-  'Hack The Box   <a href="' + HTB + '" target="_blank">hackthebox/' + '4nonym0us3' + "</a>",
+  'Hack The Box   <a href="' + HTB + '" target="_blank">hackthebox/' + '1nnuend0' + "</a>",
+  'Medium         <a href="' + MEDIUM + '" target="_blank">medium/' + 'rhea212' + "</a>",
   'GitHub         <a href="' + GITHUB + '" target="_blank">github/' + 'Rhea212' + "</a>",
-  'Medium         <a href="' + MEDIUM + '" target="_blank">medium/' + 'rhea212' + "</a> (I post writeups)",
-  'Try Hack Me    <a href="' + THM + '" target="_blank">tryhackme/' + 'rhea212' + "</a>",
+  'Try Hack Me    <a href="' + THM + '" target="_blank">tryhackme/' + 'rh34' + "</a>",
   "<br>"
 
 ];

@@ -10,6 +10,16 @@ Initializes the terminal and sets the initial position of the cursor.
 function init() {
   cursor.style.left = "0px";
   renderBanner();
+
+
+const terminalContainer = document.getElementById('terminal');
+  terminalContainer.addEventListener('click', () => {
+    if (mql.matches) {
+      mobileInput.focus();
+    } else {
+      textAreaInput.focus();
+    }
+  });
 }
 
 let comandHistory = []; //Array containing the command history.
@@ -60,7 +70,7 @@ function processCommand(command) {
     case "resume":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
       renderLine("<br>Opening my resume in a new tab..<br><br>");
-      newTab("https://drive.google.com/file/d/1xE5l_7NZKDcvBscHrIuXnmO_UKldSD58/view?usp=sharing");
+      newTab("https://drive.google.com/file/d/1X-dh233dzOtFQsywt7_Lg0wzzHJo8rEW/view?usp=sharing");
       break;
     case "clear":
       commandIndex = addCommandToHistory(args,comandHistory, commandIndex);
